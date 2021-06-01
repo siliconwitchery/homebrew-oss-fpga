@@ -1,4 +1,4 @@
-class ECPProg < Formula
+class Ecpprog < Formula
     desc "A basic driver for FTDI based JTAG probes, to program ECP5 FPGAs."
     homepage "https://github.com/gregdavill/ecpprog"
     head "https://github.com/gregdavill/ecpprog.git"
