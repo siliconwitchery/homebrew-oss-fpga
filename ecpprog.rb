@@ -7,7 +7,7 @@ class Ecpprog < Formula
   
     def install
       system "make", "-C", "ecpprog"
-      system "make", "-C", "ecpprog", "install"
+      system "make", "-C", "ecpprog", "install", "PREFIX=#{prefix}"
     end
   
   end
