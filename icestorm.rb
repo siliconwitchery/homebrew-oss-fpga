@@ -13,7 +13,7 @@ class Icestorm < Formula
 
     # icestorm now uses sed in its makefiles, but assumes gnu-sed syntax; we'll patch them to use
     # homebrew's names for gnu-sed
-    inreplace 'icebox/Makefile', 'sed', 'gsed'
+    # inreplace 'icebox/Makefile', 'sed', 'gsed'
 
     system "make", "install", "PREFIX=#{prefix}"
 
