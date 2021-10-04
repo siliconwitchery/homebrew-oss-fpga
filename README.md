@@ -16,13 +16,19 @@ Install the [Yosys](https://github.com/YosysHQ/yosys) synthesis suite. This is n
 brew install yosys
 ```
 
+For simulation, you'll need [iverilog](http://iverilog.icarus.com) and [gtkwave](http://gtkwave.sourceforge.net):
+
+``` bash
+brew install icarus-verilog gtkwave
+```
+
 It might also be useful to have the [openFPGALoader](https://github.com/trabucayre/openFPGALoader) for programming your parts.
 
 ``` bash
 brew install openfpgaloader
 ```
 
-Tap this repository into your Homebrew:
+Now tap this repository into your Homebrew using:
 
 ``` bash
 brew tap siliconwitchery/oss-fpga
