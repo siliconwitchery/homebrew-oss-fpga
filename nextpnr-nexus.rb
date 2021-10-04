@@ -10,7 +10,7 @@ class NextpnrNexus < Formula
     depends_on "boost"
     depends_on "boost-python3"
     depends_on "qt5"
-    # depends_on "project-oxide"
+    depends_on "project-oxide"
   
     def install
       system "cmake", "-DARCH=nexus", "-DOXIDE_INSTALL_PREFIX=#{HOMEBREW_PREFIX}", \

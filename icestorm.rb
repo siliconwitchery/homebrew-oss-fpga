@@ -9,9 +9,7 @@ class Icestorm < Formula
   depends_on "icestorm"
 
   def install
-
     system "make", "install", "PREFIX=#{prefix}"
-
     # FIXME: Icestorm installs a set of utility functions and database definitions into /bin/,
     # as it lacks e.g. a setup.py for its module. This should be correced in icestorm, but I'm leaving it
     # for now (I should fix this upstream).
