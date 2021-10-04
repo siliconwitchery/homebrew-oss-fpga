@@ -16,7 +16,7 @@ Install the [Yosys](https://github.com/YosysHQ/yosys) synthesis suite. This is n
 brew install yosys
 ```
 
-It might also be useful to have the openFPGALoader for programming your parts.
+It might also be useful to have the [openFPGALoader](https://github.com/trabucayre/openFPGALoader) for programming your parts.
 
 ``` bash
 brew install openfpgaloader
