@@ -1,62 +1,55 @@
-# Homebrew Repository for Open-Source Lattice FPGA Tools
+# Homebrew (macOS) formulas for open-source Lattice FPGA tools
 
-This repository lets you to install open toolchains for Lattice's **Nexus**, **iCE40** and **ECP5** FPGAs through Homebrew.
+This repository lets you install various toolchains for Lattice's **Nexus**, **iCE40** and **ECP5** FPGAs via [Homebrew](https://brew.sh).
 
 It's been forked and extended from Kate Temkin's repository which can be found [here](https://github.com/ktemkin/homebrew-oss-fpga).
 
-If you don't know what [Homebrew](https://brew.sh) is, it's a great package manager for macOS to easily install applications in a similar way to Linux's `apt-get`, or Python's `pip`.
-
----
-
 ## Get started
 
-Install the [Yosys](https://github.com/YosysHQ/yosys) synthesis suite. This is needed across all of the chip families:
-
-``` bash
-brew install yosys
-```
-
-For simulation, you'll need [iverilog](http://iverilog.icarus.com) and [gtkwave](http://gtkwave.sourceforge.net):
-
-``` bash
-brew install icarus-verilog gtkwave
-```
-
-It might also be useful to have the [openFPGALoader](https://github.com/trabucayre/openFPGALoader) for programming your parts.
-
-``` bash
-brew install openfpgaloader
-```
-
-Now tap this repository into your Homebrew using:
-
-``` bash
-brew tap siliconwitchery/oss-fpga
-```
-
-Depending on what you want to develop for, you can install one or several of these tools. They will also install the relevant dependencies.
+You can run these formulas depending on which chip families you require. They will also install the relevant dependencies such as [Yosys](https://github.com/YosysHQ/yosys), [icestorm](http://www.clifford.at/icestorm/) and [Project Oxide](https://github.com/gatecat/prjoxide).
 
 **For Nexus parts:**
 
 ``` bash
+brew tap siliconwitchery/oss-fpga
 brew install --HEAD siliconwitchery/oss-fpga/nextpnr-nexus
 ```
 
 **For iCE40 parts:**
 
 ``` bash
+brew tap siliconwitchery/oss-fpga
 brew install --HEAD siliconwitchery/oss-fpga/nextpnr-ice40
 ```
 
 **For ECP5 parts:**
 
 ``` bash
+brew tap siliconwitchery/oss-fpga
 brew install --HEAD siliconwitchery/oss-fpga/nextpnr-ecp5
 ```
 
-That's it! You should now be able to run all the needed tools for development directly from your command line.
+That's it! You should be able to run all the development tools directly from the command line.
 
----
+## Optional FPGA tools
+
+For simulation, verification and programming, [gtkwave](http://gtkwave.sourceforge.net), [iverilog](http://iverilog.icarus.com), [openFPGALoader](https://github.com/trabucayre/openFPGALoader) can be quite useful, and some of our examples use them.
+
+``` bash
+brew install gtkwave icarus-verilog openfpgaloader
+```
+
+## For S1 development
+
+You can install Nordic's nRF and ARM Cortex related tools from homebrew too! Here's how to install the [JLink drivers](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack), [nRF command line tools](https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/download) and the [ARM GCC toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads).
+
+``` bash
+brew install --cask homebrew/cask-drivers/segger-jlink
+
+brew install --cask homebrew/cask-drivers/nordic-nrf-command-line-tools
+
+brew install --cask gcc-arm-embedded
+```
 
 ## Licence
 
