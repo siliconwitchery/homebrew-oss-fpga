@@ -11,7 +11,7 @@ class NextpnrEcp5 < Formula
   depends_on "boost-python3"
   depends_on "qt5"
   depends_on "project-trellis"
-  depends on "yosys"
+  depends_on "yosys"
 
   def install
     system "cmake", "-DARCH=ecp5", "-DTRELLIS_INSTALL_PREFIX=#{HOMEBREW_PREFIX}", \
