@@ -14,7 +14,7 @@ class NextpnrNexus < Formula
     depends_on "yosys"
   
     def install
-      system "cmake", ".", "-DARCH=nexus", "-DOXIDE_INSTALL_PREFIX=#{HOMEBREW_PREFIX}", "-DBUILD_TESTS=OFF"
+      system "cmake", ".", *std_cmake_args, "-DARCH=nexus", "-DOXIDE_INSTALL_PREFIX=#{HOMEBREW_PREFIX}", "-DBUILD_TESTS=OFF" 
       system "make", "install"
     end
   end
