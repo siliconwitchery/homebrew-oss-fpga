@@ -14,7 +14,7 @@ class NextpnrIce40 < Formula
   depends_on "yosys"
 
   def install
-    system "cmake", ".", "-DARCH=ice40", "-DICEBOX_ROOT=#{HOMEBREW_PREFIX}/share/icebox"
+    system "cmake", ".", "-DARCH=ice40", "-DICEBOX_ROOT=#{HOMEBREW_PREFIX}/share/icebox", "-DBUILD_TESTS=OFF"
     system "make", "-j$(sysctl -n hw.physicalcpu)", "install"
   end
 
