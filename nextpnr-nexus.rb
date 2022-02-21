@@ -15,6 +15,6 @@ class NextpnrNexus < Formula
   
     def install
       system "cmake", ".", "-DARCH=nexus", "-DOXIDE_INSTALL_PREFIX=#{HOMEBREW_PREFIX}", "-DBUILD_TESTS=OFF"
-      system "make", "-j$(sysctl -n hw.physicalcpu)", "install"
+      system "make", "install"
     end
   end

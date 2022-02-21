@@ -15,7 +15,7 @@ class NextpnrIce40 < Formula
 
   def install
     system "cmake", ".", "-DARCH=ice40", "-DICEBOX_ROOT=#{HOMEBREW_PREFIX}/share/icebox", "-DBUILD_TESTS=OFF"
-    system "make", "-j$(sysctl -n hw.physicalcpu)", "install"
+    system "make", "install"
   end
 
 end
