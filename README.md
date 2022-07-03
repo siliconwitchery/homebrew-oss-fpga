@@ -11,21 +11,18 @@ You can run these formulas depending on which chip families you require. They wi
 **For Nexus parts:**
 
 ``` bash
-brew tap siliconwitchery/oss-fpga
 brew install --HEAD siliconwitchery/oss-fpga/nextpnr-nexus
 ```
 
 **For iCE40 parts:**
 
 ``` bash
-brew tap siliconwitchery/oss-fpga
 brew install --HEAD siliconwitchery/oss-fpga/nextpnr-ice40
 ```
 
 **For ECP5 parts:**
 
 ``` bash
-brew tap siliconwitchery/oss-fpga
 brew install --HEAD siliconwitchery/oss-fpga/nextpnr-ecp5
 ```
 
@@ -39,16 +36,28 @@ For simulation, verification and programming, [gtkwave](http://gtkwave.sourcefor
 brew install gtkwave icarus-verilog openfpgaloader
 ```
 
+To run gtkwave, you may need to install the Switch module for Perl
+
+```bash
+sudo perl -MCPAN -e 'install Switch'
+```
+
 ## For S1 development
 
 You can install Nordic's nRF and ARM Cortex related tools from homebrew too! Here's how to install the [JLink drivers](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack), [nRF command line tools](https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/download) and the [ARM GCC toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads).
 
 ``` bash
-brew install --cask homebrew/cask-drivers/segger-jlink
+brew install homebrew/cask-drivers/segger-jlink
 
-brew install --cask homebrew/cask-drivers/nordic-nrf-command-line-tools
+brew install homebrew/cask-drivers/nordic-nrf-command-line-tools
 
 brew install --cask gcc-arm-embedded
+```
+
+**Note** for Apple Silicon Macs. The latest GCC ARM is currently broken. It will install but not run correctly. In that case install the 2021 version version using the command:
+
+```bash
+brew install siliconwitchery/oss-fpga/gcc-arm-embedded
 ```
 
 ## Licence
